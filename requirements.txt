@@ -4,6 +4,7 @@ botocore==1.40.36
 Django==5.2.6
 django-environ==0.12.0
 django-storages==1.14.6
+djangorestframework==3.16.1
 jmespath==1.0.1
 pillow==11.3.0
 python-dateutil==2.9.0.post0

@@ -11,6 +11,9 @@ class Tag(models.Model):
 
 
 class Image(models.Model):
+    project = models.ForeignKey(
+        "Project", on_delete=models.CASCADE, related_name="images"
+    )
     image = models.ImageField(
         upload_to=rename_file_to_upload,
         storage=ProjectImagesStorage(),
@@ -28,14 +31,12 @@ class Project(models.Model):
     github_link = models.URLField(blank=True, null=True)
     live_link = models.URLField(blank=True, null=True)
     tags = models.ManyToManyField(Tag, related_name="projects")
-    placeholder_image = models.ForeignKey(
-        Image,
-        on_delete=models.SET_NULL,
-        null=True,
+    placeholder_image = models.ImageField(
+        upload_to=rename_file_to_upload,
+        storage=ProjectImagesStorage(),
         blank=True,
-        related_name="placeholder_for",
+        null=True,
     )
-    images = models.ManyToManyField(Image, related_name="projects", blank=True)
 
     def __str__(self):
         return self.name

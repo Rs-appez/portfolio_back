@@ -1,4 +1,11 @@
 asgiref==3.9.1
+boto3==1.40.36
+botocore==1.40.36
 Django==5.2.6
 django-environ==0.12.0
+jmespath==1.0.1
+python-dateutil==2.9.0.post0
+s3transfer==0.14.0
+six==1.17.0
 sqlparse==0.5.3
+urllib3==2.5.0

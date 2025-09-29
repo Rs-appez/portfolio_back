@@ -17,7 +17,9 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = env.bool("DEBUG", default=False)
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [env("BACKEND_HOST", default="127.0.0.1")]
+
+CSRF_TRUSTED_ORIGINS = ["https://" + env("BACKEND_HOST", default="")]
 
 
 # Application definition

@@ -129,8 +129,7 @@ AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME", default="")
 AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID", default="")
 AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY", default="")
 AWS_S3_ENDPOINT_URL = (
-    "https://" + env("AWS_S3_ENDPOINT_URL", default="") +
-    ".s3.eu-west-3.amazonaws.com"
+    "https://" + env("AWS_S3_ENDPOINT_URL", default="") + ".s3.eu-west-3.amazonaws.com"
 )
 AWS_S3_OBJECT_PARAMETERS = {
     "CacheControl": "max-age=86400",

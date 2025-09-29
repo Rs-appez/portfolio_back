@@ -127,6 +127,8 @@ LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "Europe/Brussels"
 
+TIME_FORMAT = "H:i:s"
+
 USE_I18N = True
 
 USE_L10N = True

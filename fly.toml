@@ -25,6 +25,7 @@ processes = ['app']
 
 [[vm]]
 size = 'shared-cpu-1x'
+memory = 512
 
 [[statics]]
 guest_path = '/code/static'

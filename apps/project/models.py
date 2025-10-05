@@ -37,6 +37,7 @@ class Project(models.Model):
         blank=True,
         null=True,
     )
+    linked_projects = models.ManyToManyField("self", blank=True, symmetrical=True)
 
     def __str__(self):
         return self.name

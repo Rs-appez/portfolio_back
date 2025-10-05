@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     # local apps
     "apps.project",
+    "apps.files"
 ]
 
 MIDDLEWARE = [

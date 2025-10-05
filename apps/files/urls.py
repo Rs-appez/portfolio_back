@@ -3,5 +3,5 @@ from django.urls import path, include
 from .views import CVViewSet
 
 router = DefaultRouter()
-router.register(r"cv", CVViewSet, basename="cv")
+router.register(r"resume", CVViewSet, basename="cv")
 urlpatterns = [path("api/", include(router.urls))]

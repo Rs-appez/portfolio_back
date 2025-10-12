@@ -6,8 +6,8 @@ from utils.nameHandler import rename_file_to_upload
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return f"{self.name}"
 
 
 class Image(models.Model):
@@ -22,7 +22,7 @@ class Image(models.Model):
     )
 
     def __str__(self):
-        return self.image.url if self.image else "No Image"
+        return getattr(self.image, "url", "No Image") if self.image else "No Image"
 
 
 class Project(models.Model):
@@ -40,4 +40,4 @@ class Project(models.Model):
     linked_projects = models.ManyToManyField("self", blank=True, symmetrical=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name}"
